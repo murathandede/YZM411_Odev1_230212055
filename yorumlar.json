@@ -1,0 +1,12 @@
+{
+  "_not": "Olcumlere (ciktilar/) bakarak KENDI cumlelerinle doldur. Kisa tut: rapor 2 sayfa.",
+  "adim5_gordum": "", "adim5_neden": "", "adim5_kontrol": "",
+  "adim6_parlaklik_gordum": "", "adim6_parlaklik_neden": "", "adim6_parlaklik_kontrol": "",
+  "adim6_gama": "",
+  "adim7_gordum": "", "adim7_neden": "", "adim7_kontrol": "",
+  "soru_sari_arkaplan": "",
+  "soru_buyutme": "",
+  "tutmayan_tahmin": "",
+  "sinirlar": "",
+  "yapay_zeka_beyani": "Arac: Claude (Anthropic). Amac: odev1.py ve rapor_olustur.py iskeletinin yazilmasi. Etkiledigi dosyalar: odev1.py, rapor_olustur.py, README.md. Fotograflar, tahminler ve yorumlar bana aittir. Dogrulama: [NASIL DOGRULADIGINI YAZ, orn. 64 -> 128/16 kontrolu, BGR/RGB assert, maskeleri gozle inceleme]."
+}

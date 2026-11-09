@@ -1,0 +1,39 @@
+{
+  "ogrenci_adi": "Murathan Dede",
+  "ogrenci_no": "230212055",
+  "kamera": "",
+  "oto_pozlama_beyaz_dengesi": "",
+  "sahne_aciklamasi": "",
+  "fotograflar": {
+    "normal": "fotograflar/normal.jpg",
+    "golge": "fotograflar/golge.jpg",
+    "lamba": "fotograflar/lamba.jpg"
+  },
+  "nesne_roi": [
+    830,
+    70,
+    120,
+    75
+  ],
+  "yazi_roi": [
+    560,
+    120,
+    240,
+    250
+  ],
+  "pikseller_xy": [
+    [
+      880,
+      110
+    ],
+    [
+      700,
+      100
+    ],
+    [
+      900,
+      375
+    ]
+  ],
+  "hizalama": "golge ve lamba, hizala.py ile normal'e hizalandi (ham: fotograflar/ham/)"
+}

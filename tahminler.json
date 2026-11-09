@@ -1,0 +1,8 @@
+{
+  "_not": "Her deneyi CALISTIRMADAN ONCE 2 cumle yaz: hangi ayrinti/hata degisecek, neden? Bos alan varsa odev1.py calismaz.",
+  "adim5_maske": "Gölgede RGB maskesinin sözlükteki alanı küçülecek, çünkü tek bir kanalın alt sınırın altına inmesi pikseli dışarıda bırakır; H ve S sınırlar içinde kalırsa HSV daha az etkilenir. Monitör ışığı kanalları farklı oranlarda değiştirirse RGB sözlüğü kaçırıp masa/mouse pad'i seçebilir; ışık H veya S'yi kaydırırsa HSV de bozulabilir.",
+  "adim6_parlaklik": "Ortalama 40'tan az artacak: 215'in üzerindeki değerler (ör. beyaz A4) 255'te kırpılıp daha az artar (240→255, yalnızca +15).",
+  "adim6_gama05": "Görüntü aydınlanacak ve ortalama yükselecek, çünkü 0–1 arasındaki bir sayının karekökü kendisinden büyüktür (64→~128); 0 ve 255 değişmez.",
+  "adim6_gama20": "Görüntü kararacak ve ortalama düşecek (64→~16); mutlak düşüş en çok orta tonlarda, oransal düşüş en çok koyu tonlarda olur.",
+  "adim7_kucultme": "NEAREST 4×4 bloktan tek piksel seçtiği için 2–3 piksellik çizgileri kaçırıp kopuk harf ve sahte desen (aliasing) üretecek; AREA siyahla sarıyı ortalayıp kenarları yumuşatacak ve kontrastı düşürecek ama harf şekli daha tutarlı kalacak. Büyütme kaybolan ayrıntıyı geri getirmeyecek."
+}

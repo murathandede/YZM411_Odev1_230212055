@@ -1,0 +1,342 @@
+{
+  "surumler": {
+    "python": "3.13.18",
+    "opencv": "5.0.0",
+    "numpy": "2.5.3",
+    "matplotlib": "3.11.2"
+  },
+  "ayarlar": {
+    "ogrenci_adi": "Murathan Dede",
+    "ogrenci_no": "230212055",
+    "kamera": "",
+    "oto_pozlama_beyaz_dengesi": "",
+    "sahne_aciklamasi": "",
+    "fotograflar": {
+      "normal": "fotograflar/normal.jpg",
+      "golge": "fotograflar/golge.jpg",
+      "lamba": "fotograflar/lamba.jpg"
+    },
+    "nesne_roi": [
+      830,
+      70,
+      120,
+      75
+    ],
+    "yazi_roi": [
+      560,
+      120,
+      240,
+      250
+    ],
+    "pikseller_xy": [
+      [
+        880,
+        110
+      ],
+      [
+        700,
+        100
+      ],
+      [
+        900,
+        375
+      ]
+    ],
+    "hizalama": "golge ve lamba, hizala.py ile normal'e hizalandi (ham: fotograflar/ham/)"
+  },
+  "adim4": {
+    "normal": {
+      "shape": [
+        2048,
+        1536,
+        3
+      ],
+      "dtype": "uint8",
+      "min": 0,
+      "max": 255,
+      "pikseller": [
+        {
+          "x": 880,
+          "y": 110,
+          "bgr": [
+            24,
+            133,
+            187
+          ],
+          "rgb": [
+            187,
+            133,
+            24
+          ],
+          "rgb_5x5_ort": [
+            187.6,
+            132.4,
+            24.3
+          ]
+        },
+        {
+          "x": 700,
+          "y": 100,
+          "bgr": [
+            20,
+            128,
+            186
+          ],
+          "rgb": [
+            186,
+            128,
+            20
+          ],
+          "rgb_5x5_ort": [
+            185.7,
+            128.1,
+            20.5
+          ]
+        },
+        {
+          "x": 900,
+          "y": 375,
+          "bgr": [
+            39,
+            142,
+            199
+          ],
+          "rgb": [
+            199,
+            142,
+            39
+          ],
+          "rgb_5x5_ort": [
+            198.3,
+            142.1,
+            38.7
+          ]
+        }
+      ]
+    },
+    "golge": {
+      "shape": [
+        2048,
+        1536,
+        3
+      ],
+      "dtype": "uint8",
+      "min": 0,
+      "max": 255,
+      "pikseller": [
+        {
+          "x": 880,
+          "y": 110,
+          "bgr": [
+            51,
+            162,
+            218
+          ],
+          "rgb": [
+            218,
+            162,
+            51
+          ],
+          "rgb_5x5_ort": [
+            218.0,
+            162.0,
+            50.8
+          ]
+        },
+        {
+          "x": 700,
+          "y": 100,
+          "bgr": [
+            33,
+            158,
+            216
+          ],
+          "rgb": [
+            216,
+            158,
+            33
+          ],
+          "rgb_5x5_ort": [
+            216.2,
+            158.2,
+            33.4
+          ]
+        },
+        {
+          "x": 900,
+          "y": 375,
+          "bgr": [
+            55,
+            168,
+            225
+          ],
+          "rgb": [
+            225,
+            168,
+            55
+          ],
+          "rgb_5x5_ort": [
+            223.8,
+            166.4,
+            55.2
+          ]
+        }
+      ]
+    },
+    "lamba": {
+      "shape": [
+        2048,
+        1536,
+        3
+      ],
+      "dtype": "uint8",
+      "min": 0,
+      "max": 229,
+      "pikseller": [
+        {
+          "x": 880,
+          "y": 110,
+          "bgr": [
+            9,
+            84,
+            116
+          ],
+          "rgb": [
+            116,
+            84,
+            9
+          ],
+          "rgb_5x5_ort": [
+            115.3,
+            83.3,
+            8.1
+          ]
+        },
+        {
+          "x": 700,
+          "y": 100,
+          "bgr": [
+            4,
+            78,
+            112
+          ],
+          "rgb": [
+            112,
+            78,
+            4
+          ],
+          "rgb_5x5_ort": [
+            112.1,
+            78.6,
+            3.3
+          ]
+        },
+        {
+          "x": 900,
+          "y": 375,
+          "bgr": [
+            28,
+            99,
+            136
+          ],
+          "rgb": [
+            136,
+            99,
+            28
+          ],
+          "rgb_5x5_ort": [
+            135.7,
+            98.7,
+            28.0
+          ]
+        }
+      ]
+    }
+  },
+  "esikler": {
+    "kaynak": "normal isik, nesne_roi, %2-%98 yuzdelik + pay",
+    "rgb_alt": [
+      164,
+      113,
+      3
+    ],
+    "rgb_ust": [
+      215,
+      157,
+      50
+    ],
+    "h_alt": 15,
+    "h_ust": 24,
+    "h_kaydirma": 0,
+    "s_alt": 178,
+    "s_ust": 255,
+    "v_alt": 139,
+    "v_ust": 255
+  },
+  "adim5": {
+    "normal": {
+      "rgb_oran_%": 4.901,
+      "hsv_oran_%": 5.163,
+      "rgb_roi_ici_%": 99.67,
+      "hsv_roi_ici_%": 99.69
+    },
+    "golge": {
+      "rgb_oran_%": 0.345,
+      "hsv_oran_%": 4.788,
+      "rgb_roi_ici_%": 6.47,
+      "hsv_roi_ici_%": 98.83
+    },
+    "lamba": {
+      "rgb_oran_%": 0.0,
+      "hsv_oran_%": 0.007,
+      "rgb_roi_ici_%": 0.0,
+      "hsv_roi_ici_%": 0.0
+    }
+  },
+  "adim6": {
+    "orijinal_ort": 121.01,
+    "parlaklik_b+40": {
+      "olculen_ort": 160.93,
+      "naif_beklenti_f(ort)": 161.01,
+      "255te_kirpilan_deger_%": 1.842,
+      "kirpma_kaybi": 0.08,
+      "zaten_255_olan_%": 0.002
+    },
+    "gama_0.5": {
+      "olculen_ort": 167.06,
+      "naif_beklenti_f(ort)": 175.66
+    },
+    "gama_2.0": {
+      "olculen_ort": 76.42,
+      "naif_beklenti_f(ort)": 57.43
+    },
+    "kontrol_64": {
+      "g0.5": 127.7,
+      "g2.0": 16.1
+    }
+  },
+  "adim7": {
+    "kesit_boyut": [
+      250,
+      240
+    ],
+    "kucuk_boyut": [
+      62,
+      60
+    ],
+    "INTER_NEAREST": {
+      "MAE": 10.6,
+      "kontrast_P95-P5": 59.0,
+      "kenar_enerjisi": 9.98
+    },
+    "INTER_AREA": {
+      "MAE": 6.2,
+      "kontrast_P95-P5": 43.0,
+      "kenar_enerjisi": 6.67
+    },
+    "orijinal": {
+      "kontrast_P95-P5": 58.0,
+      "kenar_enerjisi": 8.03
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "yontem": "ORB+RANSAC homografi, ECC ince ayar, warpPerspective INTER_LINEAR",
+  "referans": "normal",
+  "boyut": [
+    2048,
+    1536
+  ],
+  "golge": {
+    "orb_eslesme": 1492,
+    "ransac_inlier": 1277,
+    "ecc_cc": 0.9520162606199764,
+    "kenar_uyumu_ham": 0.102,
+    "kenar_uyumu_orb": 0.635,
+    "kenar_uyumu_ecc": 0.602,
+    "secilen": "orb",
+    "homografi": [
+      [
+        1.14099,
+        -0.05431,
+        35.83687
+      ],
+      [
+        0.02656,
+        1.15363,
+        -28.24075
+      ],
+      [
+        -1e-05,
+        -0.0,
+        1.0
+      ]
+    ],
+    "olcek_yaklasik": 1.148
+  },
+  "lamba": {
+    "orb_eslesme": 490,
+    "ransac_inlier": 320,
+    "ecc_cc": 0.9187949305451897,
+    "kenar_uyumu_ham": 0.132,
+    "kenar_uyumu_orb": 0.659,
+    "kenar_uyumu_ecc": 0.557,
+    "secilen": "orb",
+    "homografi": [
+      [
+        1.01399,
+        -0.0381,
+        -74.70423
+      ],
+      [
+        -0.03109,
+        1.03307,
+        11.20657
+      ],
+      [
+        -6e-05,
+        1e-05,
+        1.0
+      ]
+    ],
+    "olcek_yaklasik": 1.023
+  }
+}
