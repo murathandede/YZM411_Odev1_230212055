@@ -1,9 +1,9 @@
 {
   "ogrenci_adi": "Murathan Dede",
   "ogrenci_no": "230212055",
-  "kamera": "",
-  "oto_pozlama_beyaz_dengesi": "",
-  "sahne_aciklamasi": "",
+  "kamera": "iPhone 17 (ana kamera)",
+  "oto_pozlama_beyaz_dengesi": "açık (kilitlenmedi); bu yüzden 'yalnızca ışık değişti' denemez",
+  "sahne_aciklamasi": "Masa üstünde sarı Langenscheidt sözlük, klipsli altlıkta beyaz A4 ve lacivert kitap; telefonla yukarıdan çekim; gölge karton ile, üçüncü çekim tavan ışığı kapalıyken monitör ışığıyla.",
   "fotograflar": {
     "normal": "fotograflar/normal.jpg",
     "golge": "fotograflar/golge.jpg",

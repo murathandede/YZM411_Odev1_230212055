@@ -1,12 +1,18 @@
 {
   "_not": "Olcumlere (ciktilar/) bakarak KENDI cumlelerinle doldur. Kisa tut: rapor 2 sayfa.",
-  "adim5_gordum": "", "adim5_neden": "", "adim5_kontrol": "",
-  "adim6_parlaklik_gordum": "", "adim6_parlaklik_neden": "", "adim6_parlaklik_kontrol": "",
-  "adim6_gama": "",
-  "adim7_gordum": "", "adim7_neden": "", "adim7_kontrol": "",
-  "soru_sari_arkaplan": "",
-  "soru_buyutme": "",
-  "tutmayan_tahmin": "",
-  "sinirlar": "",
-  "yapay_zeka_beyani": "Arac: Claude (Anthropic). Amac: odev1.py ve rapor_olustur.py iskeletinin yazilmasi. Etkiledigi dosyalar: odev1.py, rapor_olustur.py, README.md. Fotograflar, tahminler ve yorumlar bana aittir. Dogrulama: [NASIL DOGRULADIGINI YAZ, orn. 64 -> 128/16 kontrolu, BGR/RGB assert, maskeleri gozle inceleme]."
+  "adim5_gordum": "Gölgede RGB maskesi görüntünün %0,35'ini, HSV %4,79'unu seçti; monitör ışığında ikisi de ~%0. Bu oranlar alan gösterir, doğruluk değildir.",
+  "adim5_neden": "Gölgede örnek piksel (218,162,51) üç kanalda da RGB üst sınırını aştı (R +3, G +5, B +1) ama HSV'yi geçti (H≈20, S≈195, V≈218). Monitörde (116,84,9) R ve G alt sınırın altında; HSV'de H ve S içeride ama V=116 < 139.",
+  "adim5_kontrol": "Hizalı fotoğraflarda sözlük bölgesinde her kanal için sınır dışı pikselleri ayrı renklendirip sayarım; üst sınır aşımı ve V ihlalinin sözlüğün geneline yayılıp yayılmadığını görürüm.",
+  "adim6_parlaklik_gordum": "Ortalama 121,01'den 160,93'e çıktı (+39,92); değerlerin %1,8'i kırpıldı, kırpma artışı yalnızca 0,08 azalttı.",
+  "adim6_parlaklik_neden": "Yalnızca 215'in üstündeki değerler kırpılır; telefon pozlamayı tüm sahneye göre ayarladığı için beyaz A4 255'e yakın çıkmadı.",
+  "adim6_parlaklik_kontrol": "215'i aşan pikselleri işaretleyip A4 üzerinde toplanıp toplanmadığına bakarım; A4 histogramını tüm görüntüyle karşılaştırır, taşan miktarların toplamını değer sayısına bölerek ~0,08'i doğrularım.",
+  "adim6_gama": "Yön tahminle uyumlu (γ=0,5 aydınlattı, γ=2,0 kararttı), ama ortalamaya gama uygulamak (175,7 / 57,4) ölçümden (167,1 / 76,4) farklı. Kare ve karekök doğrusal değildir; her piksel kendi değerine göre değişir. Kontrol: 0 ve 255 piksellerinin ortalaması 127,5; γ=2 ile f(ortalama)=63,75 ama ortalama(f)=127,5.",
+  "adim7_gordum": "Kontrast (P95−P5) orijinalde 58, NEAREST'te 59, AREA'da 43. NEAREST'te harfler kopuk ve dişli, AREA'da yumuşak ve soluk; AREA'da harf biçimini izlemek daha kolay.",
+  "adim7_neden": "NEAREST seçtiği pikselleri aynen korur, kontrast kalır; ama ince çizgi örnekleme noktaları arasına düşerse kaybolur ve yapay kopukluk oluşur. AREA siyah çizgiyle sarı zemini ortalar: iz tutarlı kalır, fark azalır. P95−P5 çizgi bağlantısını ölçmez.",
+  "adim7_kontrol": "Aynı sözcüğü iki çıktıda aynı ölçekte yan yana koyup orijinaldeki bir çizginin NEAREST'te nerede koptuğunu, AREA'da nerede soluklaştığını işaretlerim.",
+  "soru_sari_arkaplan": "Maske yalnızca kanal değerlerine bakar, şekil veya konum bilmez; sarı lamba altında masanın değerleri eşiğe girerse o da seçilir. Benim sahnemde masa ve mouse pad seçilmedi, çünkü bu ışıkta değerleri eşik dışında kaldı; bunu oradan örnek piksellerle doğrulayabilirim.",
+  "soru_buyutme": "240×250 kesit 60×62'ye indi: NEAREST pikselleri atladı, AREA birden fazla pikseli tek değerde birleştirdi. Büyütme yalnızca kalan pikselleri kopyalar veya komşulardan hesaplar; örneklenmemiş bir çizginin yerini belirleyecek bilgi kalmaz.",
+  "tutmayan_tahmin": "Gölgede RGB değerlerinin düşeceğini tahmin ettim; değerler (187,133,24)→(218,162,51) yükseldi, piksel alt değil üst sınırı aştığı için maskeden çıktı. Monitörde HSV'nin sarıyı koruyacağını tahmin ettim; H ve S içeride kaldı ama V=116 < 139 yüzünden HSV alanı ~%0 oldu. Parlaklık tahmini tuttu (+39,92 < 40).",
+  "sinirlar": "Gölge fotoğrafının daha parlak çıkması otomatik pozlamayla uyumlu (EXIF yok, kanıtlanamadı). Gölge sözlüğe tam düşmedi; tek maske oranı farklı bölgeleri birlikte özetliyor. Homografi hizalamasındaki yeniden örnekleme kenar ve eşiğe yakın pikselleri değiştirebilir. WhatsApp sıkıştırması ince yazı kenarlarını etkileyebilir.",
+  "yapay_zeka_beyani": "Araç: Claude (Anthropic). Amaç: odev1.py, hizala.py ve rapor_olustur.py kodlarının yazılması, ROI/piksel koordinatlarının seçimi, tahmin ve yorum metinlerimin rapora sığacak şekilde kısaltılması. Etkilediği dosyalar: odev1.py, hizala.py, rapor_olustur.py, README.md, ayarlar.json. Fotoğraflar, tahminler ve yorumların içeriği bana aittir. Doğrulama: ölçümleri ciktilar/sonuclar.json ve görsellerle karşılaştırdım; kod içindeki BGR/RGB doğrulaması ve 64→128/16 gama kontrolü çalıştı."
 }
